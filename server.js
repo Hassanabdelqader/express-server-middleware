@@ -12,7 +12,7 @@ app.get('/',(req,res)=>{
     res.status(200).send('Hello Home')
 })
 
-app.all('/square',square,(req,res)=>{
+app.get('/square',square,(req,res)=>{
     res.status(200).json({
         num : req.num
     })
@@ -20,8 +20,9 @@ app.all('/square',square,(req,res)=>{
 
 app.use(handleError)
 
-function start(PORT) {
-    app.listen(PORT , ()=>{
+function start(p) {
+    let PORT = p || 3001
+    app.listen(PORT, ()=>{
         console.log(`Helllo the server is Running ..... ${PORT} `)
     })
 }

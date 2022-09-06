@@ -8,12 +8,12 @@ describe('Server Test' ,  ()=>{
         expect(req.statusCode).toBe(200)
     })
     it('Rout Test / Square',async ()=>{
-        const res = await request.post('/square/?num=2')
+        const res = await request.get('/square/?num=2')
         expect(res.statusCode).toBe(200)
         expect(res._body.num).toBe(4)
     })
     it('Rout Test / Square',async ()=>{
-        const res = await request.post('/square/?num=text')
+        const res = await request.get('/square/?num=text')
         expect(res.statusCode).toBe(500)
     })
 })
