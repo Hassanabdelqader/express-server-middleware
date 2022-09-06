@@ -2,11 +2,12 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "heroku": "^7.63.0"
   },
   "scripts": {
     "start": "node index.js",
-    "test": "jest --coverage --verbose"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --coverage"
   },
   "name": "express-server-middleware",
   "description": "",
