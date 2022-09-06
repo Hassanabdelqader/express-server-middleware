@@ -22,7 +22,7 @@ app.use(handleError)
 
 function start(p) {
     let PORT = p || 3001
-    app.listen(PORT, ()=>{
+    app.listen(process.env.PORT|| PORT, ()=>{
         console.log(`Helllo the server is Running ..... ${PORT} `)
     })
 }
